@@ -192,12 +192,20 @@ wheels = [
 name = "bank-deposit-predictor"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
+
+[package.dev-dependencies]
+data = [
+    { name = "dvc" },
+]
+dev = [
     { name = "dvc" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "dvc", specifier = ">=3.63.0" }]
+
+[package.metadata.requires-dev]
+data = [{ name = "dvc", specifier = ">=3.63.0" }]
+dev = [{ name = "dvc", specifier = ">=3.63.0" }]
 
 [[package]]
 name = "billiard"
