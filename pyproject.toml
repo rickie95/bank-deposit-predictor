@@ -10,5 +10,8 @@ dependencies = [
 [dependency-groups]
 data = [
     "dvc>=3.63.0",
+    "ipykernel>=7.1.0",
+    "mlflow>=3.5.1",
+    "xgboost-cpu>=3.1.1",
 ]
 
