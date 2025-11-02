@@ -19,6 +19,16 @@ For this setup, I choose to keep the data locally. In a production setting you w
 
 DVC helps to version data along with code, in this configuration we keep the data on local storage, but it's easy to push them to an S3 bucket or even a Google Drive folder.
 
+### Model selection results
+Check out the [Model selection](./notebooks/model_selection.ipynb) for a more detailed overview, this is the brief part:
+| Model | Accuracy | Precision | Recall | F1 |
+| ----- | -------- | --------- | ------ | -- |
+| Logistic Regression | 0.903 | 0.653 | 0.415 | 0.50 | 
+| Weighted Logistic Regression | 0.859 | 0.454 | 0.843 | 0.590 |
+| XGBoost | 0.927 | 0.731| 0.623 | 0.673 |
+
+So the project will use the XGBoost model.
+
 ## Project management
 
 Done with `uv`, to setup the env just do `uv sync`
