@@ -1,10 +1,16 @@
 [project]
-name = "bank-deposit-predictor"
+name = "depositpredictor"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.120.2",
+    "loguru>=0.7.3",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "uvicorn>=0.38.0",
+    "xgboost-cpu>=3.1.1",
 ]
 
 [dependency-groups]
