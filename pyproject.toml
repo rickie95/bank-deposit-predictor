@@ -20,4 +20,9 @@ data = [
     "mlflow>=3.5.1",
     "xgboost-cpu>=3.1.1",
 ]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+]
 

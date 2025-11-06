@@ -1,0 +1,27 @@
+name: Test with Coverage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install dependencies and project
+        run: |
+          uv sync --locked --dev
+          uv pip install -e .
+
+      - name: Run tests
+        run: uv run pytests --cov=bank_deposit_predictor --cov-report=term-missing --cov-fail-under=80
