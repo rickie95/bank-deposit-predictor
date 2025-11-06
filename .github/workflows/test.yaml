@@ -24,4 +24,4 @@ jobs:
           uv pip install -e .
 
       - name: Run tests
-        run: uv run pytests ./tests --cov=bank_deposit_predictor --cov-report=term-missing --cov-fail-under=80
+        run: uv run pytest ./tests --cov=bank_deposit_predictor --cov-report=term-missing --cov-fail-under=80
