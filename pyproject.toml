@@ -1,10 +1,16 @@
 [project]
-name = "bank-deposit-predictor"
-version = "0.1.0"
+name = "depositpredictor"
+version = "0.2.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.120.2",
+    "loguru>=0.7.3",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "uvicorn>=0.38.0",
+    "xgboost-cpu>=3.1.1",
 ]
 
 [dependency-groups]
@@ -13,5 +19,10 @@ data = [
     "ipykernel>=7.1.0",
     "mlflow>=3.5.1",
     "xgboost-cpu>=3.1.1",
+]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
 ]
 
