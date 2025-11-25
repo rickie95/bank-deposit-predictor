@@ -1,8 +1,8 @@
-from enum import Enum
 from typing import TypedDict
 from loguru import logger
 from pandas import DataFrame
 
+from pydantic import BaseModel
 from xgboost import XGBClassifier
 
 
@@ -38,9 +38,8 @@ class InputData(TypedDict):
     contact_telephone: bool
     contact_unknown: bool
 
-class PredictionResult(Enum):
-    POSITIVE = 1
-    NEGATIVE = 0
+class PredictionResult(BaseModel):
+    might_open: bool
 
 class DepositPredictorModel:
 
@@ -58,4 +57,4 @@ class DepositPredictorModel:
         })
         result: list[int] = self.model.predict(data)
 
-        return PredictionResult(result[0])
+        return PredictionResult(might_open=bool(result[0]))
