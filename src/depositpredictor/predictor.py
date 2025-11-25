@@ -1,4 +1,3 @@
-from enum import Enum
 from typing import TypedDict
 from loguru import logger
 from pandas import DataFrame

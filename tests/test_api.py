@@ -2,7 +2,6 @@ import unittest
 from unittest.mock import MagicMock
 
 from fastapi.testclient import TestClient
-import pytest
 
 from depositpredictor.api import app
 from depositpredictor.model import ContactType, JobType, MaritalStatus
